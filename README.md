@@ -1,8 +1,8 @@
 # TODO
 
-- [ ] Create MongoDB
-- [ ] Seed MongoDB
-- [ ] Fetch data from MongoDB
+- [X] Create MongoDB
+- [X] Seed MongoDB
+- [X] Fetch data from MongoDB
 - [ ] Make tile components for
   - [ ] Organizaiton
   - [ ] Convention
