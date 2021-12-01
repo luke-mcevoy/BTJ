@@ -7,7 +7,7 @@ let exportedMethods = {
 		const peopleCollection = await people();
 		return await peopleCollection.find({}).toArray();
 	},
-	async getGroupByID(ID) {
+	async getGroupByID(id) {
 		const peopleCollection = await people();
 		const people = await peopleCollection.findOne({ _id: id });
 		if (!people) throw 'People not found';

@@ -7,7 +7,7 @@ let exportedMethods = {
 		const organizationCollection = await organizations();
 		return await organizationCollection.find({}).toArray();
 	},
-	async getOrganizationByID(ID) {
+	async getOrganizationByID(id) {
 		const organizationCollection = await organizations();
 		const organization = await organizationCollection.findOne({ _id: id });
 		if (!organization) throw 'Organization not found';

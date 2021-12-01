@@ -69,6 +69,71 @@ const main = async () => {
 		owner,
 		convs,
 	);
+
+	const purdue = await organizations.addOrganization(
+		'Purdue',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
+	const nyu = await organizations.addOrganization(
+		'NYU',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
+	const columbia = await organizations.addOrganization(
+		'Columbia',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
+	const yale = await organizations.addOrganization(
+		'Yale',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
+	const Harvard = await organizations.addOrganization(
+		'Harvard',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
+	const IBM = await organizations.addOrganization(
+		'IBM',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
+	const Apple = await organizations.addOrganization(
+		'Apple',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
+	const Microsoft = await organizations.addOrganization(
+		'Microsoft',
+		Math.floor(100000000 + Math.random() * 900000000),
+		'email@gmail.com',
+		owner,
+		convs,
+	);
+
 	console.log('Done seeding database');
 	await db.serverConfig.close();
 };

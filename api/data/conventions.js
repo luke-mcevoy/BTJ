@@ -7,7 +7,10 @@ let exportedMethods = {
 		const conventionCollection = await conventions();
 		return await conventionCollection.find({}).toArray();
 	},
-	async getConventionByID(ID) {
+	// async getAllConventionsForOrganization() {
+	// 	const conventionCollection =
+	// },
+	async getConventionByID(id) {
 		const conventionCollection = await conventions();
 		const convention = await conventionCollection.findOne({ _id: id });
 		if (!convention) throw 'Convention not found';
