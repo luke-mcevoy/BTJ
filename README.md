@@ -1,11 +1,10 @@
 # TODO
 
-[ ] Create MongoDB
-[ ] Seed MongoDB
-[ ] Fetch data from MongoDB
-
+- [ ] Create MongoDB
+- [ ] Seed MongoDB
+- [ ] Fetch data from MongoDB
 - [ ] Make tile components for
-      [ ] Organizaiton
-      [ ] Convention
-      [ ] Groups
-      [ ] Members
+  - [ ] Organizaiton
+  - [ ] Convention
+  - [ ] Groups
+  - [ ] Members
