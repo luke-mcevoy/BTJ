@@ -15,9 +15,18 @@ let exportedMethods = {
 		if (!convention) throw 'Convention not found';
 		return convention;
 	},
-	async addConvention(start, end, location, description, groupUUIDs, members) {
+	async addConvention(
+		name,
+		start,
+		end,
+		location,
+		description,
+		groupUUIDs,
+		members,
+	) {
 		/*
 		String uuid
+		String name
         Date start
         Date end
         String Location
@@ -29,6 +38,7 @@ let exportedMethods = {
 
 		let newConvention = {
 			_id: uuid.v4(),
+			name: name,
 			start: start,
 			end: end,
 			location: location,

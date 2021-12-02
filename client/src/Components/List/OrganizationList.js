@@ -62,17 +62,11 @@ const OrganizationList = (props) => {
 	}, []);
 
 	const buildCard = (organization) => {
-		console.log(window.location.href, typeof window.location.href);
-		const cardLink =
-			window.location.href === 'http://localhost:3000/organization/'
-				? organization._id
-				: `/organization/${organization._id}`;
-		console.log(cardLink);
 		return (
 			<Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={organization._id}>
 				<Card className={classes.card}>
-					<CardActionArea>
-						<Link to={cardLink}>
+					<Link to={`/organization/${organization._id}`}>
+						<CardActionArea>
 							<CardContent>
 								<Typography
 									className={classes.titleHead}
@@ -90,9 +84,12 @@ const OrganizationList = (props) => {
 								<Typography variant="h6" component="h1">
 									Organization Owner: {organization.owner.name}
 								</Typography>
+								<Typography variant="h6" component="h1">
+									ID: {organization._id}
+								</Typography>
 							</CardContent>
-						</Link>
-					</CardActionArea>
+						</CardActionArea>
+					</Link>
 				</Card>
 			</Grid>
 		);
@@ -113,6 +110,7 @@ const OrganizationList = (props) => {
 	} else {
 		return (
 			<div>
+				<h1>Organization List</h1>
 				<Grid container className={classes.grid} spacing={5}>
 					{card}
 				</Grid>

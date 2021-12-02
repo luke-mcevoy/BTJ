@@ -44,14 +44,31 @@ const main = async () => {
         List<String> Group uuids
         List<People> members
 		*/
-	const convs = await conventions.addConvention(
-		new Date(2021, 1, 1),
-		new Date(2021, 1, 2),
-		'NYC',
-		'Fun',
-		groupUUIDs,
-		members,
-	);
+
+	const convs = [];
+	for (conv of [
+		'Hackathon',
+		'Bowling',
+		'Music',
+		'Swimming',
+		'Golf',
+		'Dancing',
+		'Signing',
+		'Rowing',
+		'Talking',
+		'Archery',
+	]) {
+		let tmp = await conventions.addConvention(
+			conv,
+			new Date(2021, 1, 1),
+			new Date(2021, 1, 2),
+			'NYC',
+			'Fun',
+			groupUUIDs,
+			members,
+		);
+		convs.push(tmp);
+	}
 
 	/*
 		UUID.v4 uuid
@@ -67,7 +84,7 @@ const main = async () => {
 		Math.floor(100000000 + Math.random() * 900000000),
 		'email@gmail.com',
 		owner,
-		[convs],
+		convs,
 	);
 
 	const purdue = await organizations.addOrganization(
@@ -75,7 +92,7 @@ const main = async () => {
 		Math.floor(100000000 + Math.random() * 900000000),
 		'email@gmail.com',
 		owner,
-		[convs],
+		convs,
 	);
 
 	const nyu = await organizations.addOrganization(
