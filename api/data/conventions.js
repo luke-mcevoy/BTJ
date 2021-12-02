@@ -7,8 +7,7 @@ let exportedMethods = {
 		const conventionCollection = await conventions();
 		return await conventionCollection.find({}).toArray();
 	},
-	// async getAllConventionsForOrganization() {
-	// 	const conventionCollection =
+	// async getAllConventionsForOrganization(organization_id) {
 	// },
 	async getConventionByID(id) {
 		const conventionCollection = await conventions();

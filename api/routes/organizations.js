@@ -25,4 +25,12 @@ router.get('/:id', async (req, res) => {
 	}
 });
 
+// router.get('/:id/conventions', async (req, res) => {
+// 	try {
+// 		res.render('index', { title: 'Express' });
+// 	} catch (e) {
+// 		res.status(404).json({ message: 'Organization not found' });
+// 	}
+// });
+
 module.exports = router;

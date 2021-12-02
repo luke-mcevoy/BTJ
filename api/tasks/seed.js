@@ -67,7 +67,7 @@ const main = async () => {
 		Math.floor(100000000 + Math.random() * 900000000),
 		'email@gmail.com',
 		owner,
-		convs,
+		[convs],
 	);
 
 	const purdue = await organizations.addOrganization(
@@ -75,7 +75,7 @@ const main = async () => {
 		Math.floor(100000000 + Math.random() * 900000000),
 		'email@gmail.com',
 		owner,
-		convs,
+		[convs],
 	);
 
 	const nyu = await organizations.addOrganization(
